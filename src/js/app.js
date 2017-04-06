@@ -5,15 +5,16 @@ angular
   .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider
-      .state('home', {
+      .state('welcome', {
         url: '/',
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
+
+      })
+      .state('home', {
+        url: '/home',
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl'
-      })
-      .state('about', {
-        url: '/about',
-        templateUrl: 'about.html',
-        controller: 'aboutCtrl'
       })
       .state('contact', {
         url: '/contact',
