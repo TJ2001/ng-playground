@@ -1,86 +1,29 @@
 const gulp = require('gulp');
-const concat = require('gulp-concat');
-const browserSync = require('browser-sync').create();
-const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
-const clean = require('gulp-clean-css');
-const del = require('del')
+const HubRegistry = require('gulp-hub');
+const browserSync = require('browser-sync');
 
-const scripts = require('./scripts');
-const styles = require('./styles');
+const conf = require('./conf/gulp.conf');
 
-var devMode = false;
+// Load some files into the registry
+const hub = new HubRegistry([conf.path.tasks('*.js')]);
 
-gulp.task('css', function(){
-  gulp.src(styles)
-      .pipe(sourcemaps.init())
-      .pipe(sass())
-      .pipe(sourcemaps.write())
-      .pipe(concat('main.css'))
-      .pipe(clean())
-      .pipe(gulp.dest('./dist/css'))
-      .pipe(browserSync.reload({
-          stream: true
-      }));
-});
+// Tell gulp to use the tasks just loaded
+gulp.registry(hub);
 
-gulp.task('js', function(){
-  gulp.src(scripts)
-      .pipe(concat('scripts.js'))
-      // .pipe(uglify())
-      .pipe(gulp.dest('./dist/js'))
-      .pipe(browserSync.reload({
-        stream: true
-      }));
-});
+gulp.task('build', gulp.series(gulp.parallel('other', 'webpack:dist')));
+gulp.task('test', gulp.series('karma:single-run'));
+gulp.task('test:auto', gulp.series('karma:auto-run'));
+gulp.task('serve', gulp.series('webpack:watch', 'watch', 'browsersync'));
+gulp.task('serve:dist', gulp.series('default', 'browsersync:dist'));
+gulp.task('default', gulp.series('clean', 'build'));
+gulp.task('watch', watch);
 
-gulp.task('copy', function () {
-    gulp.src('src/library/**/*')
-    .pipe(gulp.dest('./dist/library'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-});
+function reloadBrowserSync(cb) {
+  browserSync.reload();
+  cb();
+}
 
-
-gulp.task('html', function(){
-  gulp.src('./src/templates/**/*.html')
-      .pipe(gulp.dest('./dist/'))
-      .pipe(browserSync.reload({
-        stream: true
-      }));
-});
-
-gulp.task('rebuild', function(){
-  del('dist');
-});
-
-gulp.task('destroy', function(){
-  del(['dist', 'bower_components'])
-})
-
-gulp.task('build', function(){
-  gulp.start(['css','js','html']);
-});
-
-gulp.task('browserSync', function() {
-  browserSync.init(null, {
-    open: false,
-    server: {
-      baseDir: 'dist'
-    }
-  });
-});
-
-gulp.task('start', function() {
-  devMode= true;
-  gulp.start(['build', 'browserSync']);
-  gulp.watch(['./src/scss/**/*.scss'], ['css']);
-  gulp.watch(['./src/js/**/*.js'], ['js']);
-  gulp.watch(['./src/templates/**/*.html'], ['html']);
-});
-
-gulp.task('test', function(){
-  gulp.start(['rebuild','copy','start'])
-})
+function watch(done) {
+  gulp.watch(conf.path.tmp('index.html'), reloadBrowserSync);
+  done();
+}
