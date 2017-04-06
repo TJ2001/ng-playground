@@ -76,7 +76,7 @@ gulp.task('browserSync', function() {
 gulp.task('start', function() {
   devMode= true;
   gulp.start(['build', 'browserSync']);
-  gulp.watch(['./src/css/**/*.css'], ['css']);
+  gulp.watch(['./src/scss/**/*.scss'], ['css']);
   gulp.watch(['./src/js/**/*.js'], ['js']);
   gulp.watch(['./src/templates/**/*.html'], ['html']);
 });
