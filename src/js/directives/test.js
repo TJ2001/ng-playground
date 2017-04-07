@@ -1,9 +1,8 @@
-var app = angular.module('sprout', []);
+var myApp = angular.module('helloWorldApp');
 
-app.directive('testDirective', function() {
+myApp.directive('myFirstDirective', function(){
   return {
-      restrict: 'AE',
-      replace: 'true',
-      template: '<h3>Hello World!!</h3>'
-  };
+    template: "<h1>Hello from TESTCustom directive</h1>",
+    restrict: "E"
+  }
 });

@@ -12,22 +12,10 @@
     <script src="library/scripts/jquery.carouFredSel-6.2.0-packed.js"></script>
     <!-- <script src="library/scripts/carousel.js"></script> -->
     <script src="js/scripts.js"></script>
-    <script type="text/javascript">
-    var app = angular.module('sprout', []);
-
-    app.directive('testDirective', function() {
-      return {
-          restrict: 'AE',
-          replace: 'true',
-          template: '<h3>Hello World!!</h3>'
-      };
-    });
-
-    </script>
   </head>
   <body>
     <div test-directive></div>
-    <!-- <header ng-include="'views/views/menu.html'"></header> -->
+    <header ng-include="'views/views/menu.html'"></header>
     <div ui-view></div>
     <footer ng-include="'views/footer.html'"></footer>
     <div test-directive></div>
