@@ -3,9 +3,7 @@ html, body {
     padding: 0;
     margin: 0;
   }
-  // body {
-  //   background: #555;
-  // }
+
   body * {
     font-family: Arial, Geneva, SunSans-Regular, sans-serif;
     font-size: 14px;
@@ -46,19 +44,28 @@ html, body {
     height: 325px;
   }
   #carousel .slide > div.large {
-    left: 0;
+    left: 10%;
     z-index: 3;
   }
   #carousel .slide > div.large img {
     margin-top: 50px;
   }
   #carousel .slide > div.small {
-    right: 0;
-    z-index: 2;
+    right: -40px;
+    z-index: 4;
   }
   #carousel .slide > div.small img {
-    margin-top: 100px;
+    margin-top: 125px;
   }
+
+  #carousel .slide > div.phone {
+    left: 0;
+    z-index: 3;
+  }
+  #carousel .slide > div.phone img {
+    margin-top: 180px;
+  }
+
 
   #pager {
     position: absolute;

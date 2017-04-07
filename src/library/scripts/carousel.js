@@ -13,6 +13,13 @@ $(function() {
         marginRight: 50,
         width: 300
       });
+
+    $slide.find('.phone').addClass( 'back' )
+      .find('img').css({
+        marginTop: 325,
+        marginLeft: 50,
+        width: 200
+      });
   }
   function slideIn( $slide ) {
     $slide.find('.large img')
@@ -52,6 +59,22 @@ $(function() {
       }, {
         duration: _duration / 2
       });
+
+      $slide.find('.phone img')
+        .delay( _duration )
+        .animate({
+          marginTop: 50
+        }, {
+          duration: _duration,
+          complete: function() {
+            $slide.find('.phone').removeClass( 'back' );
+          }
+        })
+        .animate({
+          marginTop: 100
+        }, {
+          duration: _duration / 2
+        });
 
     setTimeout(function() {
       $slide.find('.small img')
@@ -102,9 +125,33 @@ $(function() {
       }, {
         duration: _duration
       });
+    $slide.find('.phone img')
+      .delay( _duration / 2 )
+      .animate({
+        marginTop: -25
+      }, {
+        duration: _duration / 2,
+        complete: function() {
+          $slide.find('.large').addClass( 'back' );
+        }
+      })
+      .animate({
+        marginTop: 325
+      }, {
+        duration: _duration
+      });
 
     setTimeout(function() {
       $slide.find('.large img')
+        .animate({
+          width: 400,
+          marginLeft: 50
+        }, {
+          queue: false,
+          duration: _duration
+        });
+    }, _duration / 2);
+      $slide.find('.phone img')
         .animate({
           width: 400,
           marginLeft: 50
