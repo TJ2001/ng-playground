@@ -9,12 +9,27 @@
     <script data-require="angular.js@1.2.10" data-semver="1.2.10" src="http://code.angularjs.org/1.2.10/angular.js"></script>
     <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="library/scripts/jquery-3.2.0.min.js"></script>
+    <script src="library/scripts/jquery.carouFredSel-6.2.0-packed.js"></script>
+    <!-- <script src="library/scripts/carousel.js"></script> -->
     <script src="js/scripts.js"></script>
+    <script type="text/javascript">
+    var app = angular.module('sprout', []);
 
+    app.directive('testDirective', function() {
+      return {
+          restrict: 'AE',
+          replace: 'true',
+          template: '<h3>Hello World!!</h3>'
+      };
+    });
+
+    </script>
   </head>
   <body>
-    <header ng-include="'views/views/menu.html'"></header>
+    <div test-directive></div>
+    <!-- <header ng-include="'views/views/menu.html'"></header> -->
     <div ui-view></div>
     <footer ng-include="'views/footer.html'"></footer>
+    <div test-directive></div>
   </body>
 </html>

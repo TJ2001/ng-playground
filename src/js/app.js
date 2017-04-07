@@ -7,14 +7,14 @@ angular
     $stateProvider
       .state('welcome', {
         url: '/',
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-
-      })
-      .state('home', {
-        url: '/home',
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl'
+
+      })
+      .state('about', {
+        url: '/about',
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
       })
       .state('code', {
         url: '/code',
