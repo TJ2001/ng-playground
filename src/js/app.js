@@ -16,8 +16,8 @@ angular
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl'
       })
-      .state('contact', {
-        url: '/contact',
+      .state('code', {
+        url: '/code',
         templateUrl: 'views/code.html',
         controller: 'CodeCtrl'
       })

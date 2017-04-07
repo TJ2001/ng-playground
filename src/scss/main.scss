@@ -1,3 +1,39 @@
-* {
+$blue: #7ACBF9;
+$pink: #FFB7D7;
+
+.artboard {
+  height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
   background-color: green;
+}
+
+.link {
+  cursor: pointer;
+  width: 200px;
+  height: inherit;
+  float: left;
+  .link-text{
+    font-size: 2.5em;
+    text-align: center;
+  }
+}
+
+.link1 {
+  background-color: orange;
+}
+
+.link2 {
+  background-color: $blue;
+}
+
+.link3 {
+  background-color: $pink;
+}
+
+hr {
+    border: 5px solid;
 }
