@@ -1,4 +1,4 @@
-angular.module('helloWorldApp')
+angular.module('sprout')
 .controller('HomeCtrl', [
     '$scope',
     function($scope) {
@@ -8,7 +8,7 @@ angular.module('helloWorldApp')
 ]);
 
 
-// var App = angular.module('helloWorldApp')
+// var App = angular.module('sprout')
 // App.controller('HomeCtrl', [
 //     '$scope',
 //     function($scope) {

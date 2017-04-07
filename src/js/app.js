@@ -1,5 +1,5 @@
 angular
-  .module('helloWorldApp', [
+  .module('sprout', [
     'ui.router'
   ])
   .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
@@ -24,7 +24,7 @@ angular
   }])
 
 
-// var app = angular.module('helloWorldApp', ["ngRoute"]);
+// var app = angular.module('sprout', ["ngRoute"]);
 // app.config(function($routeProvider) {
 //     $routeProvider
 //     .when("/", {

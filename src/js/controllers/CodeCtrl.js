@@ -1,4 +1,4 @@
-angular.module('helloWorldApp')
+angular.module('sprout')
 .controller('CodeCtrl', [
     '$scope',
     function($scope) {

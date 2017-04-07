@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="helloWorldApp">
+<html lang="en" ng-app="sprout">
   <head>
     <meta charset="utf-8">
     <title>A proper angular hello world app</title>
@@ -14,10 +14,9 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <div test-directive></div>
     <header ng-include="'views/views/menu.html'"></header>
     <div ui-view></div>
     <footer ng-include="'views/footer.html'"></footer>
-    <div test-directive></div>
+    <my-first-directive></my-first-directive>
   </body>
 </html>
