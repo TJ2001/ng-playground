@@ -8,31 +8,41 @@ $pink: #FFB7D7;
 .navbar {
   width: 100%;
   height: 50px;
-  background-color: green;
+  // background-color: green;
+  border-bottom: 1px solid #777;
+  margin: 0;
 }
 
 .link {
   cursor: pointer;
-  width: 200px;
+  width: 20%;
   height: inherit;
   float: left;
+  -webkit-box-shadow: 1px 7px 5px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 7px 5px 1px rgba(0,0,0,0.75);
+  box-shadow: 1px 7px 5px 1px rgba(0,0,0,0.75);
   .link-text{
     font-size: 2.5em;
     text-align: center;
+    margin-top: 15px;
   }
 }
 
-.link1 {
-  background-color: orange;
+.link:hover {
+  background-color: yellow;
 }
 
-.link2 {
-  background-color: $blue;
+.link:active {
+  margin-top: 11px;
+  -webkit-box-shadow: -2px -11px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px -11px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: -2px -11px 5px 0px rgba(0,0,0,0.75);
 }
 
-.link3 {
-  background-color: $pink;
+.link-active {
+  background-color: yellow;
 }
+
 
 hr {
     border: 5px solid;

@@ -1,24 +1,12 @@
 angular.module('sprout')
 .controller('HomeCtrl', [
-    '$scope',
-    function($scope) {
+    '$scope', '$location',
+    function($scope, $location) {
         console.log('Loaded.');
         $scope.message = 'Message';
+        $scope.isActive = function(route) {
+            return route === $location.path();
+        }
+        console.log($location.path());
     }
 ]);
-
-
-// var App = angular.module('sprout')
-// App.controller('HomeCtrl', [
-//     '$scope',
-//     function($scope) {
-//         console.log('Loaded.');
-//         $scope.message = 'Message';
-//     }
-// ]);
-// App.directive('myFirstDirective', function(){
-//   return {
-//     template: "<h1>Hello from TESTCustom directive</h1>",
-//     restrict: "E"
-//   }
-// });

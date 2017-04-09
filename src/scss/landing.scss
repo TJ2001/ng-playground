@@ -1,0 +1,129 @@
+$wrapper: #333;
+$table: #001D38;
+$blue: #7ACBF9;
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  body * {
+    font-family: Arial, Geneva, SunSans-Regular, sans-serif;
+    color: #222;
+    line-height: 20px;
+  }
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  .landing {
+    background-color: $table;
+    height: 100vh;
+    .header {
+      // background-color: $blue;
+      height: 100px;
+      .landing-title {
+        margin: 0;
+        padding-top: 30px;
+        color: white;
+        font-size: 3em;
+      }
+      .profession {
+        color: white;
+      }
+    }
+  }
+  #wrapper {
+    border-bottom: 1px solid #777;
+    // background: #333;
+    background: #7ACBF9;
+    height: 40%;
+    width: 100%;
+    padding-top: 0;
+    position: absolute;
+    #inner {
+      width: 650px;
+      height: 400px;
+      overflow: hidden;
+      margin-left: -325px;
+      position: absolute;
+      bottom: -75px;
+      left: 50%;
+    }
+    #carousel .slide {
+      width: 650px;
+      height: 400px;
+      float: left;
+      position: relative;
+    }
+    #carousel .slide > div {
+      height: 400px;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+    }
+    #carousel .slide > div.back {
+      height: 325px;
+    }
+    #carousel .slide > div.large {
+      left: 10%;
+      z-index: 3;
+    }
+    #carousel .slide > div.large img {
+      margin-top: 50px;
+    }
+    #carousel .slide > div.small {
+      right: -40px;
+      z-index: 2;
+    }
+    #carousel .slide > div.small img {
+      margin-top: 125px;
+    }
+
+    #carousel .slide > div.phone {
+      left: 0;
+      z-index: 2;
+    }
+    #carousel .slide > div.phone img {
+      margin-top: 175px;
+    }
+
+    #pager {
+      position: absolute;
+      bottom: 0px;
+      right: 50px;
+      z-index: 6;
+    }
+    #pager a {
+      border-radius: 10px;
+      border: 1px solid #FFE8E8;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 5px;
+    }
+    #pager a.selected {
+      border-width: 4px;
+      margin: 3px;
+    }
+    #pager a span {
+      display: none;
+    }
+  }

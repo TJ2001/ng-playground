@@ -8,8 +8,7 @@ angular
       .state('welcome', {
         url: '/',
         templateUrl: 'views/landing.html',
-        controller: 'LandingCtrl'
-
+        controller: 'LandingCtrl',
       })
       .state('about', {
         url: '/about',
