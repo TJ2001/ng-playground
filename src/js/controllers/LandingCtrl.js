@@ -171,7 +171,7 @@ angular.module('sprout')
             pagination: '#pager',
             scroll: {
               fx: 'none',
-              timeoutDuration: 4000,
+              timeoutDuration: 8000,
               conditions: function( direction ) {
                 if ( $carousel.hasClass( 'prepared' ) )
                 {

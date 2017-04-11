@@ -7,11 +7,19 @@ myApp.directive('marginSlide', function($parse){
     transclude: false,
     compile: function (element, attrs) {
 
-      $(".back2").hover(function(){
+      $(".project-back").hover(function(){
           $(".shade").animate({
               width: 'toggle'
-          }, 1000, 'easeInOutQuad');
-
+          }, 800, 'easeInOutQuad');
       });
-
+      $(".project-back2").hover(function(){
+          $(".shade2").animate({
+              width: 'toggle'
+          }, 800, 'easeInOutQuad');
+      });
+      $(".project-back3").hover(function(){
+          $(".shade3").animate({
+              width: 'toggle'
+          }, 800, 'easeInOutQuad');
+      });
 }}});
