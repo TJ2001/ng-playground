@@ -1,5 +1,7 @@
 $blue: #7ACBF9;
-$height: 800px;
+$height: 960px;
+$row-width: 100%;
+$row-height: 250px;
 
 .projects {
   height: $height;
@@ -35,11 +37,72 @@ $height: 800px;
   }
 }
 
+
+
+.back2 {
+  position: relative;
+  width: $row-width;
+  height: $row-height;
+  overflow: hidden;
+  .trigger3 {
+    // width: calc($row-width/5);
+    width: 20%;
+    height: 100%;
+    background-color: orange;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    z-index: 4;
+  }
+  .test-content {
+    width: 80%;
+    height: 100%;
+    // position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,191,255,0.5);
+    z-index: 4;
+  }
+  .color-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    // background-color: green;
+    z-index: 7;
+    .cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      width: 50%;
+      height: $row-height;
+      background: white;
+    }
+    .shade {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $row-width;
+      height: $row-height;
+      background-color: rgba(238,130,238,0.5);
+      z-index: 4;
+    }
+  }
+
+}
+
+
+
 .main {
  position: relative;
- width: 755px;
- height: 400px;
+ width: $row-width;
+ height: $row-height;
  background-color: black;
+ overflow: hidden;
  .back, .gg {
   width: 100%;
   height: 100%;
@@ -47,10 +110,10 @@ $height: 800px;
   top: 0;
   left: 0;
   z-index: 4;
-   img {
-     // margin-left: 50px;
-   }
- }
+  }
+  .gg {
+    background-color: gray;
+  }
   .back {
     background-color: orange;
   }

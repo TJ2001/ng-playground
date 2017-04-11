@@ -33,6 +33,16 @@ html, body {
       width: 1170px;
     }
   }
+  @media (min-width: 1500px) {
+    .container {
+      width: 1470px;
+    }
+  }
+  @media (min-width: 3000px) {
+    .container {
+      width: 2970px;
+    }
+  }
   .landing {
     background-color: $table;
     height: 85vh;
