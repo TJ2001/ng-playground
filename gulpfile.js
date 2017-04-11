@@ -45,7 +45,7 @@ gulp.task('copy', function () {
 
 
 gulp.task('html', function(){
-  gulp.src('./src/templates/**/*.html')
+  gulp.src('./src/templates/**/**/*.html')
       .pipe(gulp.dest('./dist/'))
       .pipe(browserSync.reload({
         stream: true

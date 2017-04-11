@@ -13,7 +13,25 @@ myApp.directive('jqueryDirective', function($parse){
     replace: true,
     transclude: false,
     compile: function (element, attrs) {
-      $("#test").hide()
+      $("#test").hide();
+      // $("div").animate({
+      //   width: 'toggle'
+      // });
+    }
+  }
+});
+
+myApp.directive('animateDirective', function($parse){
+  return {
+    restrict: "E",
+    replace: true,
+    transclude: false,
+    compile: function (element, attrs) {
+      $(".trigger").click(function(){
+          $(".gg").animate({
+              width: 'toggle'
+          }, 1000);
+      });
     }
   }
 });

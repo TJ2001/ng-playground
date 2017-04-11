@@ -2,6 +2,7 @@
 <html lang="en" ng-app="sprout">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A proper angular hello world app</title>
     <!-- <link rel="stylesheet" href="library/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
@@ -16,7 +17,7 @@
   <body>
     <header ng-include="'views/views/menu.html'"></header>
     <div ui-view></div>
-    <footer ng-include="'views/footer.html'"></footer>
+    <footer ng-include="'views/views/footer.html'"></footer>
     <my-first-directive></my-first-directive>
   </body>
 </html>
