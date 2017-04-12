@@ -1,6 +1,7 @@
 $wrapper: #333;
 $table: #001D38;
 $blue: #7ACBF9;
+$darkblue: #1884fe;
 
 html, body {
     height: 100%;
@@ -34,11 +35,24 @@ html, body {
     }
   }
   .landing {
-    background-color: $table;
-    height: 100vh;
+    background-color: $blue;
+    height: 80vh;
     .header {
-      // background-color: $blue;
-      height: 100px;
+      background-color: $blue;
+      height: 150px;
+      text-shadow: 0 1px 0 #ccc,
+           0 2px 0 #c9c9c9,
+           0 3px 0 #bbb,
+           0 4px 0 #b9b9b9,
+           0 5px 0 #aaa,
+           0 6px 1px rgba(0,0,0,.1),
+           0 0 5px rgba(0,0,0,.1),
+           0 1px 3px rgba(0,0,0,.3),
+           0 3px 5px rgba(0,0,0,.2),
+           0 5px 10px rgba(0,0,0,.25),
+           0 10px 10px rgba(0,0,0,.2),
+           0 20px 20px rgba(0,0,0,.15);
+
       .landing-title {
         margin: 0;
         padding-top: 30px;
@@ -53,7 +67,7 @@ html, body {
   #wrapper {
     border-bottom: 1px solid #777;
     // background: #333;
-    background: #7ACBF9;
+    background: white;
     height: 40%;
     width: 100%;
     padding-top: 0;
