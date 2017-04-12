@@ -1,0 +1,127 @@
+$blue: #7ACBF9;
+$height: 960px;
+$row-width: 100%;
+$row-height: 250px;
+
+.projects {
+  height: $height;
+  // background-color: orange;
+}
+.projects-row {
+  height: calc(100%/3);
+  border-bottom: 3px solid white;
+  display: flex;
+  .projects-image {
+    width: 50%;
+    height: 100%;
+    .project-image {
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+  .projects-content {
+    background-color: gray;
+    width: 50%;
+    height: 100%;
+    .content-text {
+      margin-top: 5px;
+      padding: 4%;
+    }
+    .built-text {
+      margin: 0;
+      color: $blue;
+      font-style: italic;
+      font-size: 2em;
+    }
+  }
+}
+
+.project-title {
+  font-size: 3.5em;
+  text-align: center;
+}
+
+.project-back, .project-back2, .project-back3 {
+  position: relative;
+  width: $row-width;
+  height: $row-height;
+  overflow: hidden;
+  .trigger3 {
+    // width: calc($row-width/5);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    .fantasy-image {
+      width: 50%;
+    }
+  }
+  .test-content {
+    width: calc(50% - 6px);
+    height: calc(100% - 6px);
+    // position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    border: 3px solid black;
+    background-color: rgba(0,191,255,1);
+
+    z-index: 4;
+  }
+  .color-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    // background-color: green;
+    z-index: 7;
+    .cover, .cover2, .cover3 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 5;
+      width: 50%;
+      height: $row-height;
+      background: white;
+    }
+    .shade, .shade2, .shade3 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: $row-width;
+      height: $row-height;
+      background-color: rgba(0,191,255,0.5);
+      z-index: 4;
+    }
+  }
+
+}
+
+
+
+.main {
+ position: relative;
+ width: $row-width;
+ height: $row-height;
+ background-color: black;
+ overflow: hidden;
+ .back, .gg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  }
+  .gg {
+    background-color: gray;
+  }
+  .back {
+    background-color: orange;
+  }
+}
