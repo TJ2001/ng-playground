@@ -13,7 +13,6 @@ html, body {
     color: #222;
     line-height: 20px;
   }
-
   @media (min-width: 768px) {
     .container {
       width: 750px;
@@ -64,13 +63,12 @@ html, body {
       }
     }
   }
-
   @media (max-width: 700px) {
     .landing {
         height: 100vh;
         background-color: orange;
-      }
     }
+  }
 
   #wrapper {
     border-bottom: 1px solid #777;
@@ -110,6 +108,7 @@ html, body {
     }
     #carousel .slide > div.large img {
       margin-top: 50px;
+      width: 450px;
     }
     #carousel .slide > div.small {
       right: -40px;
@@ -117,6 +116,7 @@ html, body {
     }
     #carousel .slide > div.small img {
       margin-top: 125px;
+      width: 350px;
     }
 
     #carousel .slide > div.phone {
@@ -125,6 +125,7 @@ html, body {
     }
     #carousel .slide > div.phone img {
       margin-top: 175px;
+      width: 100px;
     }
 
     #pager {
@@ -148,4 +149,87 @@ html, body {
     #pager a span {
       display: none;
     }
+  }
+  @media (max-width: 500px) {
+    #wrapper {
+      // border-bottom: 1px solid #777;
+      // background: #333;
+      background: white;
+      height: 35%;
+      width: 100%;
+      padding-top: 0;
+      position: absolute;
+        #inner {
+          width: 325px;
+          height: 200px;
+          overflow: visible;
+          margin-left: -162.5px;
+          position: absolute;
+          bottom: -37.5px;
+          left: 50%;
+        }
+        #carousel .slide {
+          width: 325px;
+          height: 200px;
+          float: left;
+          position: relative;
+        }
+        #carousel .slide > div {
+          height: 200px;
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+        }
+        #carousel .slide > div.back {
+          height: 162.5px;
+        }
+        #carousel .slide > div.large {
+          left: 10%;
+          z-index: 3;
+        }
+        #carousel .slide > div.large img {
+          margin-top: 25px;
+          width: 225px;
+        }
+        #carousel .slide > div.small {
+          right: -0px;
+          z-index: 2;
+
+        }
+        #carousel .slide > div.small img {
+          margin-top: 62.5px;
+          width: 175px;
+        }
+
+        #carousel .slide > div.phone {
+          left: 10px;
+          z-index: 2;
+        }
+        #carousel .slide > div.phone img {
+          margin-top: 87.5px;
+          width: 50px;
+        }
+
+        #pager {
+          position: absolute;
+          bottom: -60px;
+          left: calc(50% - 70px);
+          z-index: 6;
+        }
+        #pager a {
+          border-radius: 10px;
+          border: 1px solid #FFE8E8;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin: 2.5px 15px 2.5px 15px ;
+        }
+        #pager a.selected {
+          border-width: 6px;
+          margin: 2.5px 15px 2.5px 15px ;
+        }
+        #pager a span {
+          display: none;
+        }
+      }
   }
