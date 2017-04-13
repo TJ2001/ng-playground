@@ -3,6 +3,7 @@ $pink: #FFB7D7;
 
 .artboard {
   height: 100vh;
+  width: 100vw;
 }
 
 .navbar {
@@ -25,6 +26,11 @@ $pink: #FFB7D7;
     font-size: 2.5em;
     text-align: center;
     margin-top: 15px;
+  }
+  @media (max-width: 800px) {
+    .link-text {
+      font-size: 1.25em;
+    }
   }
 }
 

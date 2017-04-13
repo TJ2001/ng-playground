@@ -7,17 +7,17 @@ myApp.directive('marginSlide', function($parse){
     transclude: false,
     compile: function (element, attrs) {
 
-      $(".project-back").hover(function(){
+      $(".project-back").click(function(){
           $(".shade").animate({
               width: 'toggle'
           }, 800);
       });
-      $(".project-back2").hover(function(){
+      $(".project-back2").click(function(){
           $(".shade2").animate({
               width: 'toggle'
           }, 800);
       });
-      $(".project-back3").hover(function(){
+      $(".project-back3").click(function(){
           $(".shade3").animate({
               width: 'toggle'
           }, 800);
