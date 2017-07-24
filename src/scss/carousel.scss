@@ -34,7 +34,7 @@ html, body {
   }
   .landing {
     background-color: $blue;
-    height: 80vh;
+    height: 90vh;
     .header {
       background-color: #1884fe;
       width: 100%;
@@ -65,7 +65,7 @@ html, body {
   }
   @media (max-width: 700px) {
     .landing {
-        height: 100vh;
+        height: 90vh;
         background-color: orange;
     }
   }
@@ -159,6 +159,8 @@ html, body {
       width: 100%;
       padding-top: 0;
       position: absolute;
+      // overflow: hidden;
+
         #inner {
           width: 325px;
           height: 200px;
@@ -167,6 +169,7 @@ html, body {
           position: absolute;
           bottom: -37.5px;
           left: 50%;
+
         }
         #carousel .slide {
           width: 325px;
@@ -192,13 +195,15 @@ html, body {
           width: 225px;
         }
         #carousel .slide > div.small {
-          right: -0px;
+          right: 0px;
           z-index: 2;
 
         }
         #carousel .slide > div.small img {
           margin-top: 62.5px;
-          width: 175px;
+          width: 150px;
+          overflow: hidden;
+          padding: 0;
         }
 
         #carousel .slide > div.phone {
@@ -213,7 +218,7 @@ html, body {
         #pager {
           position: absolute;
           bottom: -60px;
-          left: calc(50% - 70px);
+          left: calc(50% - 80px);
           z-index: 6;
         }
         #pager a {
@@ -222,10 +227,12 @@ html, body {
           display: inline-block;
           width: 20px;
           height: 20px;
+          overflow: visible;
           margin: 2.5px 15px 2.5px 15px ;
         }
         #pager a.selected {
           border-width: 6px;
+          overflow: visible;
           margin: 2.5px 15px 2.5px 15px ;
         }
         #pager a span {

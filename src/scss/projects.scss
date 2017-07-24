@@ -3,7 +3,7 @@ $height: 960px;
 $charcoal: #1e1e1e;
 $row-width: 100%;
 $row-height: 250px;
-
+$darkblue: #1884fe;
 
 .projects {
   height: 1010px;
@@ -43,6 +43,14 @@ $row-height: 250px;
 .project-title {
   font-size: 3.5em;
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 400px){
+  .project-title {
+    font-size: 2.5em;
+  }
 }
 
 .project-back, .project-back2, .project-back3 {
@@ -64,8 +72,8 @@ $row-height: 250px;
     }
   }
   .test-content {
-    width: calc(50% - 6px);
-    height: calc(100% - 6px);
+    width: 50%;
+    height: 100%;
     // position: absolute;
     float: right;
     top: 0;
@@ -85,6 +93,7 @@ $row-height: 250px;
     height: 100%;
     width: 100%;
     z-index: 7;
+
     .cover, .cover2, .cover3 {
       position: absolute;
       top: 0;
@@ -92,20 +101,92 @@ $row-height: 250px;
       z-index: 5;
       width: 50%;
       height: $row-height;
-      background: white;
+      background: rgba(0,191,255,1);
+      border: 2px solid $charcoal;
+      border-left: 0;
+      .project-name {
+        width: 300px;
+        margin-left: 20px;
+        color: white;
+        hr {
+
+        }
+      }
     }
     .shade, .shade2, .shade3 {
       position: absolute;
       top: 0;
-      right: 0;
-      width: $row-width;
+      left: 0;
+      width: 50%;
       height: $row-height;
-      background-color: rgba(0,191,255,1);
+      background: rgba(0,191,255, 0.5);
       z-index: 4;
+      border: 2px solid $charcoal;
+      border-right: 0;
       h3 {
         margin-left: 20px;
         font-style: italic;
       }
     }
   }
+}
+
+.circle, .circle2 {
+  border-radius: 50%;
+	width: 50px;
+	height: 50px;
+  border: 3px solid white;
+}
+
+.circle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.circle2 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+
+.triangle, .triangle-second {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 16px 23px 16px 0;
+  border-color: transparent #ffffff transparent transparent;
+}
+
+.triangle-third, .triangle-fourth {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 16px 0 16px 23px;
+  border-color: transparent transparent transparent #ffffff;
+}
+
+.triangle {
+  position: absolute;
+  bottom: 18px;
+  right: 20px;
+}
+
+.triangle-second {
+  position: absolute;
+  bottom: 18px;
+  right: 35px;
+}
+
+.triangle-third {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+}
+
+.triangle-fourth {
+  position: absolute;
+  bottom: 18px;
+  left: 35px;
 }

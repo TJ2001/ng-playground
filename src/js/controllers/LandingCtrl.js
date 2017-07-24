@@ -416,6 +416,9 @@ angular.module('sprout')
         }
         else {
            $('#carousel').width(100);
+          $('#carousel').css('overflow','hidden');
+
+          //  $('#carousel').css('overflow','hidden')
            runMiniCarousel();
         }
 
