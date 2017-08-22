@@ -10,7 +10,7 @@ _The purpose of this application is to present potential employers as well piers
 
 ## Setup/Installation Requirements
 
-* gulp start to run application.
+* Use "gulp start" to run application.
 
 
 <!-- ## Specifications
